@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version:\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-07 22:49+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Maksym Mokriev <maksmokriev@gmail.com>\n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: desklet.js:23
+msgid "Server Status"
+msgstr "Статус сервера"
+
+#: desklet.js:75
+msgid "Need to setup"
+msgstr "Потрібне налаштування"
+
+#: desklet.js:98
+msgid "Checking ..."
+msgstr "Перевірка ..."
+
+#: desklet.js:146
+msgid "Error ping command on "
+msgstr "Помилка роботи команди ping "
+
+#: desklet.js:147 desklet.js:154 desklet.js:187 desklet.js:194
+msgid "Error"
+msgstr "Помилка"
+
+#: desklet.js:153
+msgid "Error creating ping process "
+msgstr "Помилка створення ping процесу "
+
+#: desklet.js:186
+msgid "Error curl command on "
+msgstr "Помилка роботи команди curl "
+
+#: desklet.js:193
+msgid "Error creating curl process "
+msgstr "Помилка створення curl процесу "
