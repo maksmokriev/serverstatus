@@ -73,7 +73,7 @@ MyDesklet.prototype = {
         } else {
             this.updateServersDisplay();
             //Delay the first updateStatus call by 10 seconds
-            Mainloop.timeout_add_seconds(10, () => {
+            Mainloop.timeout_add_seconds(5, () => {
                 this.updateStatus();
                 //After the first call, we start a periodic update
                 this.mainloop = Mainloop.timeout_add_seconds(this.TimeRepeat, () => {
@@ -98,10 +98,10 @@ MyDesklet.prototype = {
     updateServersDisplay: function() {
         this.servers = this.serverDefinitions.map(server => {
             if (server.display === true) {
-                let icon = new St.Icon({ icon_name: "network-connect", icon_size: 22, style_class: "rotating-icon" });
+                let icon = new St.Icon({ icon_name: "gtk-connect", icon_size: 22 });
                 let label = new St.Label({ style_class: "init" });
                 label.style = "color: " + this.TextColorBasic;
-                label.text = _("Checking ...");
+                label.text = server.name +  _(" - Checking ...");
                 let hbox = new St.BoxLayout({ x_align: St.Align.START, style_class: "box" });
                 hbox.style = "background-color: " + this.BoxBgColor;
                 hbox.add(icon);
