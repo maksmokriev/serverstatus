@@ -133,7 +133,7 @@ MyDesklet.prototype = {
     checkPing: function(server) {
         try {
             let proc = Gio.Subprocess.new(
-                ["/bin/ping", "-c", "1", "-W", this.ResponseTime, server.ip],
+                ["/bin/ping", "-c", "1", "-W", this.ResponseTime.toString(), server.ip],
                 Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
             );
 
@@ -169,7 +169,7 @@ MyDesklet.prototype = {
     checkHttp: function(server) {
         try {
             let proc = Gio.Subprocess.new(
-                ["/usr/bin/curl", "-ILs", "-w", "%{http_code}", "-m", this.ResponseTime, server.type + "://" + server.ip],
+                ["/usr/bin/curl", "-ILs", "-w", "%{http_code}", "-m", this.ResponseTime.toString(), server.type + "://" + server.ip],
                 Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
             );
             proc.communicate_utf8_async(null, null, (proc, res) => {
