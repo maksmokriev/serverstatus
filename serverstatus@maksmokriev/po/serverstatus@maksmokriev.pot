@@ -93,6 +93,10 @@ msgstr ""
 msgid "Update every:"
 msgstr ""
 
+#. settings-schema.json->ResponseTime->description
+msgid "Response time:"
+msgstr ""
+
 #. settings-schema.json->TextColorBasic->description
 msgid "Basic text color"
 msgstr ""
