@@ -3,7 +3,7 @@
   "author": "maksmokriev",
   "name": "Server status",
   "description": "A desklet that checks a host via ping or HTTP(S) and displays if it is available.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "cinnamon-version": ["6.4"],
   "main": "desklet.js",
   "type": "desklet",
