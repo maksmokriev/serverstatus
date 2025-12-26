@@ -28,6 +28,7 @@ MyDesklet.prototype = {
 
         this.settings.bind("ServerNames", "ServerNames", this.onSettingsChanged.bind(this));
         this.settings.bind("TimeRepeat", "TimeRepeat", this.onSettingsChanged.bind(this));
+        this.settings.bind("ResponseTime", "ResponseTime", this.onSettingsChanged.bind(this));
         this.settings.bind("TextColorBasic", "TextColorBasic", this.onSettingsChanged.bind(this));
         this.settings.bind("TextColorOK", "TextColorOK", this.onSettingsChanged.bind(this));
         this.settings.bind("TextColorWARN", "TextColorWARN", this.onSettingsChanged.bind(this));
@@ -54,6 +55,7 @@ MyDesklet.prototype = {
         const allServers = this.settings.getValue("ServerNames");
         this.serverDefinitions = allServers ? allServers.filter(server => server.display === true) : [];
         this.TimeRepeat = this.settings.getValue("TimeRepeat");
+        this.ResponseTime = this.settings.getValue("ResponseTime");
         this.TextColorBasic = this.settings.getValue("TextColorBasic");
         this.TextColorOK = this.settings.getValue("TextColorOK");
         this.TextColorWARN = this.settings.getValue("TextColorWARN");
@@ -131,7 +133,7 @@ MyDesklet.prototype = {
     checkPing: function(server) {
         try {
             let proc = Gio.Subprocess.new(
-                ["/bin/ping", "-c", "1", "-W", "5", server.ip],
+                ["/bin/ping", "-c", "1", "-W", this.ResponseTime, server.ip],
                 Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
             );
 
@@ -167,7 +169,7 @@ MyDesklet.prototype = {
     checkHttp: function(server) {
         try {
             let proc = Gio.Subprocess.new(
-                ["/usr/bin/curl", "-ILs", "-w", "%{http_code}", "-m", "5", server.type + "://" + server.ip],
+                ["/usr/bin/curl", "-ILs", "-w", "%{http_code}", "-m", this.ResponseTime, server.type + "://" + server.ip],
                 Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
             );
             proc.communicate_utf8_async(null, null, (proc, res) => {
