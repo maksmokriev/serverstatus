@@ -26,7 +26,8 @@
       "title": "",
       "keys": [
         "ServerNames",
-        "TimeRepeat"
+        "TimeRepeat",
+        "ResponseTime"
       ]
     },
     "section_text_color": {
@@ -97,6 +98,16 @@
     "min": 1,
     "max": 180,
     "description": "Update every:",
+    "units": "seconds",
+    "step": 1
+  },
+
+  "ResponseTime": {
+    "default": 10,
+    "type": "scale",
+    "min": 1,
+    "max": 30,
+    "description": "Response time:",
     "units": "seconds",
     "step": 1
   },
