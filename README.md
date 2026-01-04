@@ -1,4 +1,4 @@
-# serverstatus
+# Server Status
 
 The Server Status Monitor is a desklet for the Cinnamon desktop environment, designed for real-time monitoring of your server statuses. It provides a quick way to check the availability and operational health of remote hosts using various verification methods.
 
