@@ -27,3 +27,13 @@ __Key Features:__
 * __Localization:__ The desklet supports multiple languages, ensuring ease of use for users with different linguistic preferences.
 
 The Server Status Monitor is ideal for developers, system administrators, or anyone who needs a quick and convenient way to track the status of essential network resources directly from their Cinnamon desktop.
+
+## Requirements
+
+- Cinnamon 6.4
+- ping
+- curl
+
+## Privacy Policy
+
+**None of your data is collected, stored, processed or shared with the developer or any third-parties.**
