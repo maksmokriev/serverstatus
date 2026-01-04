@@ -1,5 +1,4 @@
 # SERVER STATUS Desklet.
-# Copyright (C) 2025 Maksym Mokriev
 # This file is distributed under the same license as the PACKAGE package.
 # Maksym Mokriev <maksmokriev@gmail.com>, 2025.
 #
